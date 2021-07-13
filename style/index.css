@@ -3,9 +3,6 @@
 /* Start of CSS Reset */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
-/* Document
-   ========================================================================== */
-
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -411,6 +408,22 @@ html {
     font-family: 'Cormorant Garamond', serif; 
 }
 
+/*Javascript invocation for responsive floating header that has scroll threshold*/
+html:not([data-scroll='0']) body {
+    padding-top: 3em;
+}
+  
+html:not([data-scroll='0']) header {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+    background-color: black;
+    width: 100%;
+    opacity: .9;
+}
+  
+
+
 h1 {
     color: aqua;
     margin-left: .5em;
@@ -418,11 +431,11 @@ h1 {
 }
 
 nav {
-    display: flex;
-    width: 25em;
-    height: 2.5em;
-    align-items: center;
-    justify-content: space-evenly;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+/*    position:fixed;*/
+    width:100%;
     background-color: #E27C40;
     border-radius: 25px;
     margin: auto;
@@ -432,6 +445,12 @@ a {
     text-decoration: none;
     color: white;
     font-family: 'Cormorant Garamond', serif;
+}
+
+.links{
+    display:flex;
+    width: inherit;
+    justify-content: space-around;
 }
 
 .navItem {
@@ -456,6 +475,8 @@ a {
 
 header {
     background-color: black;
+    width: 100%;
+    min-height: 3em;
 }
 
 #mainImg {
@@ -562,3 +583,93 @@ footer h3 {
 }
 
 /*End of Main CSS*/
+/*Start of Multimedia Optimization*/
+
+@media(max-width: 800px){
+    html:not([data-scroll='0']) body {
+    padding-top: 3em;
+}
+  
+    html:not([data-scroll='0']) header {
+        position: fixed;
+        top: 2em;
+        box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+        background-color: black;
+        width: 100%;
+        opacity: .9;
+    }
+    
+    img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 90%;
+        margin: 20px auto;
+    }
+    
+    #gallery1 {
+        padding-top: 2em;
+        flex-wrap: nowrap;
+    }
+    
+    #gallery2 {
+        padding-top: 1em;
+        flex-wrap: nowrap;
+    }
+    
+    .galleryImg {
+        border-radius: 5px;
+        padding: 1em;
+        margin: .5em;
+    }
+}
+
+@media(max-width: 500px){
+    html:not([data-scroll='0']) body {
+    padding-top: 3em;
+}
+  
+    html:not([data-scroll='0']) header {
+        position: fixed;
+        top: 2em;
+        box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+        background-color: black;
+        width: 100%;
+        opacity: .9;
+    }
+    
+    #firstPortion {
+        flex-direction: column;
+    }
+    
+    #mainImg {
+        margin: 0;
+        height: 50vh;
+    }
+    
+    img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 90%;
+        margin: 20px auto;
+    }
+    
+    #gallery1 {
+        padding-top: 2em;
+        flex-wrap: nowrap;
+    }
+    
+    #gallery2 {
+        padding-top: 1em;
+        flex-wrap: nowrap;
+    }
+    
+    .galleryImg {
+        border-radius: 5px;
+        padding: 1em;
+        margin: .5em;
+    }
+}
