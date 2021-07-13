@@ -583,3 +583,93 @@ footer h3 {
 }
 
 /*End of Main CSS*/
+/*Start of Multimedia Optimization*/
+
+@media(max-width: 800px){
+    html:not([data-scroll='0']) body {
+    padding-top: 3em;
+}
+  
+    html:not([data-scroll='0']) header {
+        position: fixed;
+        top: 2em;
+        box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+        background-color: black;
+        width: 100%;
+        opacity: .9;
+    }
+    
+    img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 90%;
+        margin: 20px auto;
+    }
+    
+    #gallery1 {
+        padding-top: 2em;
+        flex-wrap: nowrap;
+    }
+    
+    #gallery2 {
+        padding-top: 1em;
+        flex-wrap: nowrap;
+    }
+    
+    .galleryImg {
+        border-radius: 5px;
+        padding: 1em;
+        margin: .5em;
+    }
+}
+
+@media(max-width: 500px){
+    html:not([data-scroll='0']) body {
+    padding-top: 3em;
+}
+  
+    html:not([data-scroll='0']) header {
+        position: fixed;
+        top: 2em;
+        box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+        background-color: black;
+        width: 100%;
+        opacity: .9;
+    }
+    
+    #firstPortion {
+        flex-direction: column;
+    }
+    
+    #mainImg {
+        margin: 0;
+        height: 50vh;
+    }
+    
+    img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 90%;
+        margin: 20px auto;
+    }
+    
+    #gallery1 {
+        padding-top: 2em;
+        flex-wrap: nowrap;
+    }
+    
+    #gallery2 {
+        padding-top: 1em;
+        flex-wrap: nowrap;
+    }
+    
+    .galleryImg {
+        border-radius: 5px;
+        padding: 1em;
+        margin: .5em;
+    }
+}
